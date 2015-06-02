@@ -4,14 +4,20 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends ActionBarActivity{
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
     }
 
     @Override
@@ -35,4 +41,32 @@ public class MainActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    public void spotify(View view) {
+        showToast("Spotify app");
+    }
+
+    public void scoreApp(View view) {
+        showToast("Score app");
+    }
+
+
+    public void libraryApp(View view) {
+        showToast("Library app");
+    }
+
+    public void biggerApp(View view) {
+        showToast("Built it Bigger");
+    }
+
+    public void xyzApp(View view) {
+        showToast("XYZ app");
+    }
+
+    private void showToast(String appName){
+        Toast.makeText(this,"This Button will launch my "+appName,Toast.LENGTH_LONG).show();
+    }
+
+
+
 }
